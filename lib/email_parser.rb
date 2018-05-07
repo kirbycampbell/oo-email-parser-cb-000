@@ -14,7 +14,7 @@ attr_accessor :emails
   end
 # Breaks up the array by , and " "
   def parse
-    self.class.all.split(" ", ",")
+    @@all.split(" ", ",")
   end
 
 #makes .all available above
