@@ -10,7 +10,6 @@ attr_accessor :emails
 #Creates a new instace and saves into @@all array
   def initialize(email)
     @emails = email
-    @@all << @email
   end
 # Breaks up the array by , and " "
   def parse
