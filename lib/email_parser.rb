@@ -7,18 +7,21 @@ class EmailParser
 attr_accessor :emails
 @@all = []
 
-  def self.parse(email)
-
+#Creates a new instace and saves into @@all array
+  def initialize(email)
     @emails = email
-    @@all << email
-    @@all.uniq
-    @@all
+    email.save
+  end
+# Breaks up the array by , and " "
+  def parse
+    self.class.all.split(" ", ",")
   end
 
+#makes .all available above
   def self.all
     @@all
   end
-
+#makes .save available to shovel into @@all easily
   def save
     self.class.all << self
   end
