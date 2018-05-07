@@ -7,14 +7,12 @@ class EmailParser
 attr_accessor :emails
 @@all = []
 
-  def self.parse
+  def self.parse(email)
 
-    emails = @emails
-    email << emails.split(",")
-    @@all << email.uniq
+    @emails = email
+    @@all << email
+    @@all.uniq
     @@all
-
   end
-
 
 end
