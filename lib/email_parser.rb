@@ -13,16 +13,7 @@ attr_accessor :emails
   end
 # Breaks up the array by , and " "
   def parse
-    @@all.split(" ", ",")
-  end
-
-#makes .all available above
-  def self.all
-    @@all
-  end
-#makes .save available to shovel into @@all easily
-  def save
-    self.class.all << self
+    @emails.split(" ", ",")
   end
 
 end
