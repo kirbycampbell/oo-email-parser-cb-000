@@ -14,6 +14,6 @@ attr_accessor :emails
 # Breaks up the array by , and " "
   def parse
     @emails.split(" ", ",")
-  end
+  end.flatten.uniq
 
 end
